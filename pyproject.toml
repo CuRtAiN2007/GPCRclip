@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpcr-clip"
+version = "0.1.0"
+description = "GPCR-tailored DrugCLIP virtual screening pipeline for 2x8GB GPUs"
+requires-python = ">=3.9"
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=1.5",
+  "scikit-learn>=1.2",
+  "scipy>=1.10",
+  "torch>=2.1",
+  "rdkit>=2023.9",
+  "lmdb>=1.4",
+  "faiss-cpu>=1.7",
+  "biopython>=1.81",
+  "tqdm>=4.65",
+  "PyYAML>=6.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["gpcr_clip*"]
